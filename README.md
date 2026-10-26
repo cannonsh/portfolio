@@ -1,6 +1,6 @@
 # portfolio
 
-Personal portfolio site for [Lovro Papež](https://github.com/sloveniangooner).
+Personal portfolio site for [Lovro Papež](https://github.com/cannonsh) (cannonsh), live at [cannonsh.dev](https://cannonsh.dev).
 
 ## Tech
 

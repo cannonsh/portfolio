@@ -1,0 +1,11 @@
+.git
+node_modules
+src
+dist/index.html
+dist/assets
+package.json
+yarn.lock
+README.md
+wrangler.jsonc
+.gitignore
+.assetsignore

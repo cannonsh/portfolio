@@ -3,31 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lovro Papež — Web Developer</title>
+  <title>cannonsh — Lovro Papež, Web Developer</title>
+  <meta name="description" content="Lovro Papež (cannonsh) — web developer from Novo mesto, Slovenia. 10+ years building CMS platforms, REST APIs and sales systems." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="canonical" href="https://cannonsh.dev/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cannonsh.dev/" />
+  <meta property="og:title" content="cannonsh — Lovro Papež, Web Developer" />
+  <meta property="og:description" content="Arsenal supporter · web developer · Slovenia" />
+  <meta property="og:image" content="https://cannonsh.dev/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="dist/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg:        #19191C;
-      --bg-2:      #232326;
-      --bg-3:      #2D2D31;
+      --bg:        #0B0F14;
+      --bg-2:      #15181D;
+      --bg-3:      #1D2128;
       --border:    rgba(255,255,255,0.07);
       --text:      #FFFFFF;
-      --muted:     #8F8F99;
-      --purple:    #6B57FF;
-      --purple-dim: rgba(107,87,255,0.15);
-      --purple-glow: 0 0 40px rgba(107,87,255,0.18);
-      --rainbow: linear-gradient(90deg,
-        #FC801D 0%,
-        #EA1B63 22%,
-        #AC44F2 44%,
-        #6B57FF 56%,
-        #2E6FD8 68%,
-        #00C1D4 84%,
-        #53D88B 100%
-      );
+      --muted:     #9097A1;
+      --red:       #EF0107;
+      --red-text:  #FF4D52;
+      --red-glow:  0 0 40px rgba(239,1,7,0.16);
+      --neutral:   #E6E8EB;
+      --strip:     var(--red);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,7 +44,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Syne', sans-serif;
+      font-family: 'Inter', sans-serif;
       -webkit-font-smoothing: antialiased;
       line-height: 1.6;
     }
@@ -45,9 +52,9 @@
     .mono { font-family: 'JetBrains Mono', monospace; }
 
     /* ── Rainbow strip ── */
-    .rainbow-strip {
+    .brand-strip {
       height: 4px;
-      background: var(--rainbow);
+      background: var(--strip);
     }
 
     /* ── Nav ── */
@@ -58,7 +65,7 @@
       height: 60px;
       display: flex;
       align-items: center;
-      background: rgba(25,25,28,0.9);
+      background: rgba(11,15,20,0.9);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
@@ -73,14 +80,18 @@
       justify-content: space-between;
     }
     .nav-logo {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
       text-decoration: none;
       color: var(--text);
     }
-    .nav-logo span { color: var(--purple); }
+    .nav-logo span { color: var(--red); margin-left: -10px; }
+    .nav-mark { width: 46px; height: 26px; flex-shrink: 0; }
     .nav-links {
       display: flex;
       gap: 8px;
@@ -106,11 +117,11 @@
       font-size: 13px;
       font-weight: 500;
       color: var(--text);
-      background: var(--purple);
+      background: var(--red);
       text-decoration: none;
       transition: opacity 0.15s, box-shadow 0.15s;
     }
-    .nav-cta:hover { opacity: 0.88; box-shadow: 0 0 20px rgba(107,87,255,0.4); }
+    .nav-cta:hover { opacity: 0.88; box-shadow: 0 0 20px rgba(239,1,7,0.4); }
 
     /* ── Wrapper ── */
     .wrap {
@@ -156,7 +167,7 @@
 
     .card:hover {
       border-color: rgba(255,255,255,0.12);
-      box-shadow: var(--purple-glow);
+      box-shadow: var(--red-glow);
       transition: border-color 0.2s, box-shadow 0.2s;
     }
 
@@ -192,20 +203,20 @@
       position: absolute;
       width: 600px; height: 600px;
       top: -160px; right: -120px;
-      background: radial-gradient(circle, rgba(107,87,255,0.1) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(239,1,7,0.1) 0%, transparent 65%);
       pointer-events: none;
     }
     .hero-glow-2 {
       position: absolute;
       width: 300px; height: 300px;
       bottom: 0; left: -40px;
-      background: radial-gradient(circle, rgba(0,193,212,0.07) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 65%);
       pointer-events: none;
     }
     .hero-eyebrow {
       font-family: 'JetBrains Mono', monospace;
       font-size: 13px;
-      color: var(--purple);
+      color: var(--red-text);
       letter-spacing: 0.04em;
       margin-bottom: 18px;
     }
@@ -216,10 +227,7 @@
       line-height: 1.05;
     }
     .hero-name-gradient {
-      background: var(--rainbow);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--red);
     }
     .hero-tagline {
       margin-top: 6px;
@@ -271,19 +279,19 @@
       gap: 10px;
       padding: 9px 15px;
       border-radius: 8px;
-      border: 1px solid rgba(252,128,29,0.2);
-      background: rgba(252,128,29,0.07);
+      border: 1px solid rgba(239,1,7,0.25);
+      background: rgba(239,1,7,0.08);
     }
     .award-dot {
       width: 7px; height: 7px;
       border-radius: 50%;
-      background: #FC801D;
-      box-shadow: 0 0 10px rgba(252,128,29,0.7);
+      background: var(--red);
+      box-shadow: 0 0 10px rgba(239,1,7,0.7);
       flex-shrink: 0;
     }
     .award-text {
       font-size: 13px;
-      color: rgba(252,128,29,0.9);
+      color: var(--red-text);
       font-family: 'JetBrains Mono', monospace;
     }
 
@@ -384,17 +392,29 @@
     /* ── Sections spacing ── */
     .section { padding: 72px 0; }
     .section:first-of-type { padding-top: 0; }
+    /* ── Small screens ── */
+    @media (max-width: 640px) {
+      .nav-inner, .wrap { padding: 0 16px; }
+      .nav-links { display: none; }
+      .hero { padding: 64px 0 56px; }
+      .card-body { padding: 20px; }
+      .section { padding: 56px 0; }
+      .award-text { font-size: 12px; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Top rainbow strip -->
-  <div class="rainbow-strip"></div>
+  <!-- Top brand strip -->
+  <div class="brand-strip"></div>
 
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
-      <a class="nav-logo" href="#">slovenian<span>gooner</span></a>
+      <a class="nav-logo" href="#" aria-label="cannonsh — home">
+        <svg class="nav-mark" viewBox="50 150 460 260" aria-hidden="true"><polygon points="118,288 212,288 212,352 62,392 62,370" fill="#EF0107"/><g transform="translate(130,290) rotate(-24)"><polygon points="0,-38 215,-26 215,26 0,38" fill="#EF0107"/><rect x="196" y="-36" width="28" height="72" rx="7" fill="#EF0107"/><rect x="88" y="-41" width="20" height="82" rx="5" fill="#EF0107"/><circle cx="-8" cy="0" r="24" fill="#EF0107"/></g><circle cx="205" cy="350" r="56" fill="none" stroke="#EF0107" stroke-width="24"/><circle cx="205" cy="350" r="15" fill="#EF0107"/><g stroke="#EF0107" stroke-width="13" stroke-linecap="round"><line x1="205" y1="302" x2="205" y2="398"/><line x1="157" y1="350" x2="253" y2="350"/></g><polyline points="370,164 418,212 370,260" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/><line x1="440" y1="262" x2="490" y2="262" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round"/></svg>
+        cannon<span>sh</span>
+      </a>
       <ul class="nav-links">
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -413,7 +433,7 @@
       <div class="hero-glow-1"></div>
       <div class="hero-glow-2"></div>
 
-      <p class="hero-eyebrow au au-1">// Web Developer · Novo mesto, Slovenia</p>
+      <p class="hero-eyebrow au au-1">&gt;_ cannonsh · Web Developer · Novo mesto, Slovenia</p>
 
       <h1 class="hero-name au au-2">
         Lovro<br>
@@ -430,7 +450,7 @@
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           lovro.papez@gmail.com
         </a>
-        <a class="hero-link-ghost" href="https://github.com/sloveniangooner" target="_blank" rel="noopener">
+        <a class="hero-link-ghost" href="https://github.com/cannonsh" target="_blank" rel="noopener">
           <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
           GitHub
         </a>
@@ -463,39 +483,39 @@
 
         <!-- Adria Mobil -->
         <div class="card">
-          <div class="card-accent" style="background: var(--rainbow);"></div>
+          <div class="card-accent" style="background: var(--strip);"></div>
           <div class="card-body">
             <div class="exp-header">
               <div>
                 <div class="exp-role">Lead Web Developer</div>
-                <div class="exp-company" style="color: #AC44F2;">Adria Mobil d.o.o., Novo mesto</div>
+                <div class="exp-company" style="color: #FF4D52;">Adria Mobil d.o.o., Novo mesto</div>
               </div>
               <span class="exp-period">Apr 2017 → Present</span>
             </div>
             <ul class="exp-bullets">
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #AC44F2;">→</span>
-                Custom CMS platforms integrated with internal systems, supporting websites across <strong style="color: var(--text);">10+ countries</strong>
+                <span class="exp-bullet-marker" style="color: #FF4D52;">→</span>
+                <span>Custom CMS platforms integrated with internal systems, supporting websites across <strong style="color: var(--text);">10+ countries</strong></span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #AC44F2;">→</span>
-                Automated translation management system spanning internal and external applications
+                <span class="exp-bullet-marker" style="color: #FF4D52;">→</span>
+                <span>Automated translation management system spanning internal and external applications</span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #AC44F2;">→</span>
-                Centralized media hub for distributing product assets — images, videos, press materials
+                <span class="exp-bullet-marker" style="color: #FF4D52;">→</span>
+                <span>Centralized media hub for distributing product assets — images, videos, press materials</span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #AC44F2;">→</span>
-                Product data & pricing management with a .NET-backed REST API
+                <span class="exp-bullet-marker" style="color: #FF4D52;">→</span>
+                <span>Product data & pricing management with a .NET-backed REST API</span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #AC44F2;">→</span>
-                Full sales platform: offer creation, order management, and distribution workflows
+                <span class="exp-bullet-marker" style="color: #FF4D52;">→</span>
+                <span>Full sales platform: offer creation, order management, and distribution workflows</span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #FC801D;">★</span>
-                Key contributor to "Online Centre" — <strong style="color: #FC801D;">Best B2B E-commerce Project (Finance.si, 2024)</strong>
+                <span class="exp-bullet-marker" style="color: #FF4D52;">★</span>
+                <span>Key contributor to "Online Centre" — <strong style="color: #FF4D52;">Best B2B E-commerce Project (Finance.si, 2024)</strong></span>
               </li>
             </ul>
           </div>
@@ -503,27 +523,27 @@
 
         <!-- N3 -->
         <div class="card">
-          <div class="card-accent" style="background: linear-gradient(90deg, #2E6FD8, #00C1D4);"></div>
+          <div class="card-accent" style="background: var(--neutral);"></div>
           <div class="card-body">
             <div class="exp-header">
               <div>
                 <div class="exp-role">Web Developer</div>
-                <div class="exp-company" style="color: #2E6FD8;">N3 d.o.o. / Leeloop d.o.o., Novo mesto</div>
+                <div class="exp-company" style="color: #E6E8EB;">N3 d.o.o. / Leeloop d.o.o., Novo mesto</div>
               </div>
               <span class="exp-period">May 2013 → Apr 2017</span>
             </div>
             <ul class="exp-bullets">
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #2E6FD8;">→</span>
-                Web applications with PHP, ColdFusion, JavaScript, and Vue.js
+                <span class="exp-bullet-marker" style="color: #E6E8EB;">→</span>
+                <span>Web applications with PHP, ColdFusion, JavaScript, and Vue.js</span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #2E6FD8;">→</span>
-                Full-stack ownership across backend and frontend on multiple client projects
+                <span class="exp-bullet-marker" style="color: #E6E8EB;">→</span>
+                <span>Full-stack ownership across backend and frontend on multiple client projects</span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #2E6FD8;">→</span>
-                Infrastructure management — on-premise servers and DigitalOcean VPS
+                <span class="exp-bullet-marker" style="color: #E6E8EB;">→</span>
+                <span>Infrastructure management — on-premise servers and DigitalOcean VPS</span>
               </li>
             </ul>
           </div>
@@ -531,30 +551,30 @@
 
         <!-- Freelance -->
         <div class="card">
-          <div class="card-accent" style="background: linear-gradient(90deg, #53D88B, #00C1D4);"></div>
+          <div class="card-accent" style="background: var(--bg-3);"></div>
           <div class="card-body">
             <div class="exp-header">
               <div>
                 <div class="exp-role">Freelance Web Developer</div>
-                <div class="exp-company" style="color: #53D88B;">Remote</div>
+                <div class="exp-company" style="color: #E6E8EB;">Remote</div>
               </div>
             </div>
             <ul class="exp-bullets">
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #53D88B;">→</span>
-                Team & player management system for the <strong style="color: var(--text);">Handball Association of Slovenia</strong> — incl. live match updates API
+                <span class="exp-bullet-marker" style="color: #E6E8EB;">→</span>
+                <span>Team & player management system for the <strong style="color: var(--text);">Handball Association of Slovenia</strong> — incl. live match updates API</span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #53D88B;">→</span>
-                Website and complex registration system for <strong style="color: var(--text);">2nRace</strong> amateur racing organization
+                <span class="exp-bullet-marker" style="color: #E6E8EB;">→</span>
+                <span>Website and complex registration system for <strong style="color: var(--text);">2nRace</strong> amateur racing organization</span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #53D88B;">→</span>
-                Education management and internal employee communication tools
+                <span class="exp-bullet-marker" style="color: #E6E8EB;">→</span>
+                <span>Education management and internal employee communication tools</span>
               </li>
               <li class="exp-bullet">
-                <span class="exp-bullet-marker" style="color: #53D88B;">→</span>
-                Multiple presentation websites for small businesses
+                <span class="exp-bullet-marker" style="color: #E6E8EB;">→</span>
+                <span>Multiple presentation websites for small businesses</span>
               </li>
             </ul>
           </div>
@@ -575,40 +595,40 @@
       <div class="skills-grid">
 
         <div class="card">
-          <div class="card-accent" style="background: linear-gradient(90deg, #FC801D, #EA1B63);"></div>
+          <div class="card-accent" style="background: var(--red);"></div>
           <div class="card-body">
             <p class="skill-cat">Frontend</p>
             <div class="tags">
-              <span class="tag" style="color: #FC801D; background: rgba(252,128,29,0.1); border: 1px solid rgba(252,128,29,0.2);">React</span>
-              <span class="tag" style="color: #FC801D; background: rgba(252,128,29,0.1); border: 1px solid rgba(252,128,29,0.2);">Vue.js</span>
-              <span class="tag" style="color: #EA1B63; background: rgba(234,27,99,0.1); border: 1px solid rgba(234,27,99,0.2);">JavaScript</span>
-              <span class="tag" style="color: #EA1B63; background: rgba(234,27,99,0.1); border: 1px solid rgba(234,27,99,0.2);">HTML</span>
-              <span class="tag" style="color: #EA1B63; background: rgba(234,27,99,0.1); border: 1px solid rgba(234,27,99,0.2);">CSS</span>
-              <span class="tag" style="color: #FC801D; background: rgba(252,128,29,0.1); border: 1px solid rgba(252,128,29,0.2);">Tailwind CSS</span>
+              <span class="tag" style="color: #FF4D52; background: rgba(239,1,7,0.1); border: 1px solid rgba(239,1,7,0.2);">React</span>
+              <span class="tag" style="color: #FF4D52; background: rgba(239,1,7,0.1); border: 1px solid rgba(239,1,7,0.2);">Vue.js</span>
+              <span class="tag" style="color: #FF4D52; background: rgba(239,1,7,0.1); border: 1px solid rgba(239,1,7,0.2);">JavaScript</span>
+              <span class="tag" style="color: #FF4D52; background: rgba(239,1,7,0.1); border: 1px solid rgba(239,1,7,0.2);">HTML</span>
+              <span class="tag" style="color: #FF4D52; background: rgba(239,1,7,0.1); border: 1px solid rgba(239,1,7,0.2);">CSS</span>
+              <span class="tag" style="color: #FF4D52; background: rgba(239,1,7,0.1); border: 1px solid rgba(239,1,7,0.2);">Tailwind CSS</span>
             </div>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-accent" style="background: linear-gradient(90deg, #AC44F2, #6B57FF);"></div>
+          <div class="card-accent" style="background: var(--red);"></div>
           <div class="card-body">
             <p class="skill-cat">Backend</p>
             <div class="tags">
-              <span class="tag" style="color: #AC44F2; background: rgba(172,68,242,0.1); border: 1px solid rgba(172,68,242,0.2);">PHP</span>
-              <span class="tag" style="color: #AC44F2; background: rgba(172,68,242,0.1); border: 1px solid rgba(172,68,242,0.2);">Laravel</span>
-              <span class="tag" style="color: #6B57FF; background: rgba(107,87,255,0.1); border: 1px solid rgba(107,87,255,0.2);">REST APIs</span>
+              <span class="tag" style="color: #FF4D52; background: rgba(239,1,7,0.1); border: 1px solid rgba(239,1,7,0.2);">PHP</span>
+              <span class="tag" style="color: #FF4D52; background: rgba(239,1,7,0.1); border: 1px solid rgba(239,1,7,0.2);">Laravel</span>
+              <span class="tag" style="color: #FF4D52; background: rgba(239,1,7,0.1); border: 1px solid rgba(239,1,7,0.2);">REST APIs</span>
             </div>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-accent" style="background: linear-gradient(90deg, #00C1D4, #53D88B);"></div>
+          <div class="card-accent" style="background: var(--neutral);"></div>
           <div class="card-body">
             <p class="skill-cat">Database &amp; Tools</p>
             <div class="tags">
-              <span class="tag" style="color: #00C1D4; background: rgba(0,193,212,0.1); border: 1px solid rgba(0,193,212,0.2);">MySQL</span>
-              <span class="tag" style="color: #53D88B; background: rgba(83,216,139,0.1); border: 1px solid rgba(83,216,139,0.2);">Git</span>
-              <span class="tag" style="color: #53D88B; background: rgba(83,216,139,0.1); border: 1px solid rgba(83,216,139,0.2);">Laravel Forge</span>
+              <span class="tag" style="color: #E6E8EB; background: rgba(230,232,235,0.1); border: 1px solid rgba(230,232,235,0.2);">MySQL</span>
+              <span class="tag" style="color: #E6E8EB; background: rgba(230,232,235,0.1); border: 1px solid rgba(230,232,235,0.2);">Git</span>
+              <span class="tag" style="color: #E6E8EB; background: rgba(230,232,235,0.1); border: 1px solid rgba(230,232,235,0.2);">Laravel Forge</span>
             </div>
           </div>
         </div>
@@ -628,13 +648,13 @@
       <div class="bottom-grid">
 
         <div class="card">
-          <div class="card-accent" style="background: var(--rainbow);"></div>
+          <div class="card-accent" style="background: var(--strip);"></div>
           <div class="card-body">
             <p class="skill-cat">Education</p>
             <p style="font-size: 17px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.35;">
               Bachelor's in Computer and Information Science
             </p>
-            <p style="font-size: 13px; color: #AC44F2; margin-top: 8px; font-weight: 500;">
+            <p style="font-size: 13px; color: #FF4D52; margin-top: 8px; font-weight: 500;">
               Faculty of Computer and Information Science, Ljubljana
             </p>
             <p class="mono" style="font-size: 12px; color: var(--muted); margin-top: 14px;">2007 → 2013</p>
@@ -642,17 +662,17 @@
         </div>
 
         <div class="card">
-          <div class="card-accent" style="background: linear-gradient(90deg, #53D88B, #2E6FD8);"></div>
+          <div class="card-accent" style="background: var(--neutral);"></div>
           <div class="card-body">
             <p class="skill-cat">Languages</p>
             <div>
               <div class="lang-row">
                 <span class="lang-name">Slovenian</span>
-                <span class="lang-level" style="color: #53D88B; background: rgba(83,216,139,0.1); border: 1px solid rgba(83,216,139,0.2);">Native</span>
+                <span class="lang-level" style="color: #E6E8EB; background: rgba(230,232,235,0.1); border: 1px solid rgba(230,232,235,0.2);">Native</span>
               </div>
               <div class="lang-row">
                 <span class="lang-name">English</span>
-                <span class="lang-level" style="color: #2E6FD8; background: rgba(46,111,216,0.1); border: 1px solid rgba(46,111,216,0.2);">Highly proficient</span>
+                <span class="lang-level" style="color: #E6E8EB; background: rgba(230,232,235,0.1); border: 1px solid rgba(230,232,235,0.2);">Highly proficient</span>
               </div>
             </div>
           </div>
@@ -666,14 +686,14 @@
   <div class="wrap">
     <footer class="footer">
       <div class="footer-inner">
-        <span class="footer-text">Lovro Papež — Web Developer</span>
+        <span class="footer-text">cannonsh.dev — Lovro Papež, Web Developer</span>
         <span class="footer-text">Novo mesto, Slovenia</span>
       </div>
     </footer>
   </div>
 
-  <!-- Bottom rainbow strip -->
-  <div class="rainbow-strip"></div>
+  <!-- Bottom brand strip -->
+  <div class="brand-strip"></div>
 
 </body>
 </html>
